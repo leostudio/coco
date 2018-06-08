@@ -15,7 +15,8 @@ class Config:
     # NAME = "localhost"
 
     # Jumpserver项目的url, api请求注册会使用
-    # CORE_HOST = os.environ.get("CORE_HOST") or 'http://127.0.0.1:8080'
+    CORE_HOST = os.environ.get("CORE_HOST") or 'http://127.0.0.1:8080'
+    DEBUG = os.environ.get("DEBUG") or True
 
     # 启动时绑定的ip, 默认 0.0.0.0
     # BIND_HOST = '0.0.0.0'
@@ -37,7 +38,7 @@ class Config:
     # SECRET_KEY = None
 
     # 设置日志级别 ['DEBUG', 'INFO', 'WARN', 'ERROR', 'FATAL', 'CRITICAL']
-    # LOG_LEVEL = 'INFO'
+    LOG_LEVEL = os.environ.get("LOG_LEVEL") or 'INFO'
 
     # 日志存放的目录
     # LOG_DIR = os.path.join(BASE_DIR, 'logs')
